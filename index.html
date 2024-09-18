@@ -26,109 +26,227 @@
   </head>
 
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" w-10> 
+          <img src="./images/ekgwave.jpg" style="width: 100%;border-radius: 50%;"/>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#holter">24/48 HR. Holter Monitor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#zio">Zio Patch by iRhythm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#epatch">E-Patch by Philips (Biotel Heart)</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#zioat">Zio AT by iRhythm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mcot">MCOT by Philips (Biotel Heart)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navbar -->
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1>Cardiac Monitoring Devices Guide</h1>
+        <h6 class="card-title">
+          This site provides quick access to information on cardiac monitors,
+          including device types, EPIC ordering codes, and wear times. It's a
+          convenient resource to streamline workflows and reduce the need for
+          printed materials.
+        </h6>
+      </div>
+    </header>
+    <!-- End of header -->
     <main class="main">
       <div class="container">
-        <h1>Choose a device to learn more</h1>
-        <div class="device ziopatch">
-          <div class="card" style="width: 18rem">
-            <img src="./images/zio.webp" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Zio Patch</h5>
-              <h6 class="card-title">Manufacturer: iRhythm Technologies</h6>
-              <h6 class="card-title">Quick Tips:</h6>
-              <ul>
-                <li>Single patch.</li>
-                <li>Quick showers are allowed. No baths.</li>
-                <li>Prepaid/preaddressed return packaging provided.</li>
-                <li>Device returns to iRhythm.</li>
-                <li>Data is analyzed by iRhythm.</li>
-                <li>Device can be mailed to patient's home.</li>
-              </ul>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+        <!-- Traditional Holter Container -->
+        <div class="holter-container">
+          <h5 class="card-title">Traditional Holter Monitor</h5>
+          <div id="holter" class="device holter">
+            <div class="card" style="width: 18rem">
+              <img src="./images/holter.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Mortara Holter Monitor</h5>
+                <h6 class="card-title">Quick Tips:</h6>
+                <ul>
+                  <li class="card-text">
+                    Patient cannot shower while wearing this device.
+                  </li>
+                  <li class="card-text">
+                    Patient responsible for returning device to clinic.
+                  </li>
+                  <li class="card-text">Contact us for device availability.</li>
+                  <li class="card-text">Data is analyzed in clinic.</li>
+                  <li class="card-text">
+                    Device can be worn for 24 or 48 hours.
+                  </li>
+                </ul>
+                <h6 class="card-title">Epic Ordering Codes:</h6>
+                <ul>
+                  <li>CAR02: 24 Hours</li>
+                  <li>CAR03: 48 Hours</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="device epatch">
-          <div class="card" style="width: 18rem">
-            <img src="./images/epatch.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">E-Patch (Philips Extended Holter)</h5>
-              <h6 class="card-title">Manufacturer: Biotel Heart</h6>
-              <h6 class="card-title">Quick Tips:</h6>
-              <ul>
-                <li>Multiple patches.</li>
-                <li>Quick showers are allowed. No baths.</li>
-                <li>Prepaid/preaddressed return packaging provided.</li>
-                <li>Device returns to Philips (Biotel Heart).</li>
-                <li>Data is analyzed by Philips (Biotel Heart).</li>
-                <li>Device can be mailed to patient's home.</li>
-              </ul>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+        <!-- Extended Monitoring containers -->
+        <!-- Zio patch container -->
+        <div class="extended-monitoring-container">
+          <h5 class="card-title">Extended Monitoring Devices</h5>
+          <div id="zio" class="device ziopatch">
+            <div class="card" style="width: 18rem">
+              <img src="./images/zio.webp" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Zio Patch</h5>
+                <h6 class="card-title">Manufacturer: iRhythm Technologies</h6>
+                <h6 class="card-title">Quick Tips:</h6>
+                <ul>
+                  <li>Single patch.</li>
+                  <li>Quick showers are allowed. No baths.</li>
+                  <li>Prepaid/preaddressed return packaging provided.</li>
+                  <li>Device returns to iRhythm.</li>
+                  <li>Data is analyzed by iRhythm.</li>
+                  <li>Device can be mailed to patient's home.</li>
+                  <li>Device can be worn up to 14 days.</li>
+                </ul>
+                <h6 class="card-title">Epic Ordering Codes:</h6>
+                <ul>
+                  <li>CAR70: 2 to 7 days</li>
+                  <li>CAR75: 7 to 14 days</li>
+                  <li>The same codes should be used to mail a device home.</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Epatch container -->
+          <div id="epatch" class="device epatch">
+            <div class="card" style="width: 18rem">
+              <img src="./images/epatch1.webp" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">E-Patch (Philips Extended Holter)</h5>
+                <h6 class="card-title">Manufacturer: Biotel Heart</h6>
+                <h6 class="card-title">Quick Tips:</h6>
+                <ul>
+                  <li>Multiple patches.</li>
+                  <li>Quick showers are allowed. No baths.</li>
+                  <li>Prepaid/preaddressed return packaging provided.</li>
+                  <li>Device returns to Philips (Biotel Heart).</li>
+                  <li>Data is analyzed by Philips (Biotel Heart).</li>
+                  <li>Device can be mailed to patient's home.</li>
+                  <li>Device can be worn up to 14 days.</li>
+                </ul>
+                <h6 class="card-title">Epic Ordering Codes:</h6>
+                <ul>
+                  <li>CAR100: 2 to 7 days</li>
+                  <li>CAR105: 7 to 14 days</li>
+                  <li>The same codes should be used to mail a device home.</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="device holter">
-          <div class="card" style="width: 18rem">
-            <img src="./images/holter.webp" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">24/48hr. Holter Monitor</h5>
-              <h6 class="card-title">Quick Tips:</h6>
-              <ul>
-                <li class="card-text">
-                  Patient cannot shower while wearing this device.
-                </li>
-                <li class="card-text">
-                  Patient responsible for returning device to clinic.
-                </li>
-                <li class="card-text">Contact us for device availability.</li>
-                <li class="card-text">Data is analyzed in clinic.</li>
-              </ul>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+        <!-- End of Extended Monitoring container -->
+
+        <!-- Event monitoring devices-->
+        <div class="event-monitors">
+          <h5 class="card-title">Continuous Monitoring Devices</h5>
+          <!-- Zio AT patch container -->
+          <div id="zioat" class="device zioat">
+            <div class="card" style="width: 18rem">
+              <img src="./images/zioat.webp" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Zio AT (Mobile Cardiac Outpatient Telemetry)
+                </h5>
+                <h6 class="card-title">Manufacturer: iRhythm Technologies</h6>
+                <h6 class="card-title">Quick Tips:</h6>
+                <ul>
+                  <li>Single patch.</li>
+                  <li>Quick showers allowed. No baths.</li>
+                  <li>Prepaid/preaddressed return packaging provided.</li>
+                  <li>Device returns to iRhythm.</li>
+                  <li>Data is analyzed by iRhythm.</li>
+                  <li>Device can be mailed to patient's home.</li>
+                  <li>Gateway is used for data transmission.</li>
+                  <li>Device can be worn up to 14 days.</li>
+                </ul>
+                <h6 class="card-title">Epic Ordering Codes:</h6>
+                <ul>
+                  <li>CAR118 – In-clinic application</li>
+                  <li>CAR144 – Mail device to patient</li>
+                  <li>Choose iRhythm as the Manufacturer</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <!-- MCOT container -->
+          <div id="mcot" class="device mcot">
+            <div class="card" style="width: 18rem">
+              <img
+                src="./images/mcot.jpg"
+                class="card-img-top"
+                style="width: 65%; margin: auto"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  MCOT (Mobile Cardiac Outpatient Telemetry)
+                </h5>
+                <h6 class="card-title">Manufacturer: Biotel Heart</h6>
+                <h6 class="card-title">Quick Tips:</h6>
+                <ul>
+                  <li>Multiple patches.</li>
+                  <li>Quick showers allowed. No baths.</li>
+                  <li>Prepaid/preaddressed return packaging provided.</li>
+                  <li>Device returns to Philips (Biotel Heart).</li>
+                  <li>Data is analyzed by Philips (Biotel Heart).</li>
+                  <li>Device can be mailed to patient's home.</li>
+                  <li>Cellphone is used for data transmission.</li>
+                  <li>Device can be worn up to 30 days.</li>
+                </ul>
+                <h6 class="card-title">Epic Ordering Codes:</h6>
+                <ul>
+                  <li>CAR118 – In-clinic application</li>
+                  <li>CAR144 – Mail device to patient</li>
+                  <li>Choose Biotel Heart as the Manufacturer</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="device zioat">
-          <div class="card" style="width: 18rem">
-            <img src="./images/zioat.webp" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Zio AT</h5>
-              <h6 class="card-title">Manufacturer: iRhythm Technologies</h6>
-              <h6 class="card-title">Quick Tips:</h6>
-              <ul>
-                <li>Single patch.</li>
-                <li>Quick showers allowed. No baths.</li>
-                <li>Prepaid/preaddressed return packaging provided.</li>
-                <li>Device returns to iRhythm.</li>
-                <li>Data is analyzed by iRhythm.</li>
-                <li>Device can be mailed to patient's home.</li>
-                <li>Gateway is used for data transmission.</li>
-                <li>Device can be worn up to 14 days.</li>
-              </ul>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="device mcot">
-          <div class="card" style="width: 18rem">
-            <img src="./images/mcot.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">MCOT</h5>
-              <h6 class="card-title">Manufacturer: Biotel Heart</h6>
-              <h6 class="card-title">Quick Tips:</h6>
-              <ul>
-                <li>Multiple patch.</li>
-                <li>Quick showers allowed. No baths.</li>
-                <li>Prepaid/preaddressed return packaging provided.</li>
-                <li>Device returns to Philips (Biotel Heart).</li>
-                <li>Data is analyzed by Philips (Biotel Heart).</li>
-                <li>Device can be mailed to patient's home.</li>
-                <li>Cellphone is used for data transmission.</li>
-                <li>Device can be worn up to 30 days.</li>
-              </ul>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
+
+        <!-- End of Event Monitoring devices -->
       </div>
     </main>
   </body>

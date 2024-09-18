@@ -1,3 +1,21 @@
+.navbar-brand {
+width: 12%;
+}
+header, main {
+    padding: 1rem;
+}
+header {
+    text-align: center;
+}
+header h1 {
+    margin-bottom: 2rem;
+}
+.device {
+    margin: 2rem auto;
+}
 .card {
     width: 100% !important;
+}
+.card-title {
+    margin: 1rem auto;
 }
