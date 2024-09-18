@@ -3,18 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-      async
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-      async
-    ></script>
+    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -29,8 +18,11 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#" w-10> 
-          <img src="./images/ekgwave.jpg" style="width: 100%;border-radius: 50%;"/>
+        <a class="navbar-brand" href="#" w-10>
+          <img
+            src="./images/ekgwave.jpg"
+            style="width: 100%; border-radius: 50%"
+          />
         </a>
         <button
           class="navbar-toggler"
@@ -48,26 +40,40 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#holter">24/48 HR. Holter Monitor</a>
+           
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#holter" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Holter Monitor
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#zio">Zio Patch by iRhythm</a>
+              <a class="nav-link" href="#zio">Zio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#epatch">E-Patch by Philips (Biotel Heart)</a>
+              <a class="nav-link" href="#epatch"
+                >E-Patch</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#zioat">Zio AT by iRhythm</a>
+              <a class="nav-link" href="#zioat">Zio AT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#mcot">MCOT by Philips (Biotel Heart)</a>
+              <a class="nav-link" href="#mcot"
+                >MCOT</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- End of Navbar -->
+
     <!-- Header -->
     <header>
       <div class="container">
@@ -81,11 +87,13 @@
       </div>
     </header>
     <!-- End of header -->
+
+    <!-- Main content -->
     <main class="main">
       <div class="container">
         <!-- Traditional Holter Container -->
         <div class="holter-container">
-          <h5 class="card-title">Traditional Holter Monitor</h5>
+          <h2>Traditional Holter Monitor</h2>
           <div id="holter" class="device holter">
             <div class="card" style="width: 18rem">
               <img src="./images/holter.jpg" class="card-img-top" alt="..." />
@@ -105,11 +113,65 @@
                     Device can be worn for 24 or 48 hours.
                   </li>
                 </ul>
-                <h6 class="card-title">Epic Ordering Codes:</h6>
-                <ul>
-                  <li>CAR02: 24 Hours</li>
-                  <li>CAR03: 48 Hours</li>
-                </ul>
+
+                <!-- Accordion -->
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <h6 class="card-title">For Physicians</h6>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <h6 class="card-title">Epic Ordering Codes:</h6>
+                        <ul>
+                          <li><strong>CAR02</strong>: 24 Hours</li>
+                          <li><strong>CAR03</strong>: 48 Hours</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <h6 class="card-title">For Technicians</h6>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                      <a href="./files/holter-preparation.jpg" target="_blank">Click here to learn how to <strong>program</strong> a Mortara Holter monitor.</a>
+                      <a href="./files/holter-preparation.jpg" target="_blank">Click here to learn how to <strong>apply</strong> a Mortara Holter monitor on the patient.</a>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- End of Accordion -->
+
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
@@ -118,7 +180,7 @@
         <!-- Extended Monitoring containers -->
         <!-- Zio patch container -->
         <div class="extended-monitoring-container">
-          <h5 class="card-title">Extended Monitoring Devices</h5>
+          <h2>Extended Monitoring Devices</h2>
           <div id="zio" class="device ziopatch">
             <div class="card" style="width: 18rem">
               <img src="./images/zio.webp" class="card-img-top" alt="..." />
@@ -135,12 +197,77 @@
                   <li>Device can be mailed to patient's home.</li>
                   <li>Device can be worn up to 14 days.</li>
                 </ul>
-                <h6 class="card-title">Epic Ordering Codes:</h6>
-                <ul>
-                  <li>CAR70: 2 to 7 days</li>
-                  <li>CAR75: 7 to 14 days</li>
-                  <li>The same codes should be used to mail a device home.</li>
-                </ul>
+
+                <!-- Accordion -->
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <h6 class="card-title">For Physicians</h6>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <h6 class="card-title">Epic Ordering Codes:</h6>
+                        <ul>
+                          <li><strong>CAR70</strong>: 2 to 7 days</li>
+                          <li><strong>CAR75</strong>: 7 to 14 days</li>
+                          <li>
+                            The same codes should be used to mail a device home.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <h6 class="card-title">For Technicians</h6>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <strong
+                          >This is the second item's accordion body.</strong
+                        >
+                        It is hidden by default, until the collapse plugin adds
+                        the appropriate classes that we use to style each
+                        element. These classes control the overall appearance,
+                        as well as the showing and hiding via CSS transitions.
+                        You can modify any of this with custom CSS or overriding
+                        our default variables. It's also worth noting that just
+                        about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does
+                        limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- End of Accordion -->
+
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
@@ -163,12 +290,77 @@
                   <li>Device can be mailed to patient's home.</li>
                   <li>Device can be worn up to 14 days.</li>
                 </ul>
-                <h6 class="card-title">Epic Ordering Codes:</h6>
-                <ul>
-                  <li>CAR100: 2 to 7 days</li>
-                  <li>CAR105: 7 to 14 days</li>
-                  <li>The same codes should be used to mail a device home.</li>
-                </ul>
+
+                <!-- Accordion -->
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <h6 class="card-title">For Physicians</h6>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <h6 class="card-title">Epic Ordering Codes:</h6>
+                        <ul>
+                          <li><strong>CAR100</strong>: 2 to 7 days</li>
+                          <li><strong>CAR105</strong>: 7 to 14 days</li>
+                          <li>
+                            The same codes should be used to mail a device home.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <h6 class="card-title">For Technicians</h6>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <strong
+                          >This is the second item's accordion body.</strong
+                        >
+                        It is hidden by default, until the collapse plugin adds
+                        the appropriate classes that we use to style each
+                        element. These classes control the overall appearance,
+                        as well as the showing and hiding via CSS transitions.
+                        You can modify any of this with custom CSS or overriding
+                        our default variables. It's also worth noting that just
+                        about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does
+                        limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- End of Accordion -->
+
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
@@ -178,7 +370,7 @@
 
         <!-- Event monitoring devices-->
         <div class="event-monitors">
-          <h5 class="card-title">Continuous Monitoring Devices</h5>
+          <h2>Continuous Monitoring Devices</h2>
           <!-- Zio AT patch container -->
           <div id="zioat" class="device zioat">
             <div class="card" style="width: 18rem">
@@ -199,12 +391,75 @@
                   <li>Gateway is used for data transmission.</li>
                   <li>Device can be worn up to 14 days.</li>
                 </ul>
-                <h6 class="card-title">Epic Ordering Codes:</h6>
-                <ul>
-                  <li>CAR118 – In-clinic application</li>
-                  <li>CAR144 – Mail device to patient</li>
-                  <li>Choose iRhythm as the Manufacturer</li>
-                </ul>
+
+                <!-- Accordion -->
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <h6 class="card-title">For Physicians</h6>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <h6 class="card-title">Epic Ordering Codes:</h6>
+                        <ul>
+                          <li><strong>CAR118</strong>: In-clinic application</li>
+                          <li><strong>CAR144</strong>: Mail device to patient</li>
+                          <li>Choose iRhythm as the Manufacturer</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <h6 class="card-title">For Technicians</h6>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <strong
+                          >This is the second item's accordion body.</strong
+                        >
+                        It is hidden by default, until the collapse plugin adds
+                        the appropriate classes that we use to style each
+                        element. These classes control the overall appearance,
+                        as well as the showing and hiding via CSS transitions.
+                        You can modify any of this with custom CSS or overriding
+                        our default variables. It's also worth noting that just
+                        about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does
+                        limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- End of Accordion -->
+
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
@@ -234,12 +489,74 @@
                   <li>Cellphone is used for data transmission.</li>
                   <li>Device can be worn up to 30 days.</li>
                 </ul>
-                <h6 class="card-title">Epic Ordering Codes:</h6>
-                <ul>
-                  <li>CAR118 – In-clinic application</li>
-                  <li>CAR144 – Mail device to patient</li>
-                  <li>Choose Biotel Heart as the Manufacturer</li>
-                </ul>
+                <!-- Accordion -->
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <h6 class="card-title">For Physicians</h6>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <h6 class="card-title">Epic Ordering Codes:</h6>
+                        <ul>
+                          <li><strong>CAR118</strong>: In-clinic application</li>
+                          <li><strong>CAR144</strong>: Mail device to patient</li>
+                          <li>Choose Biotel Heart as the Manufacturer</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <h6 class="card-title">For Technicians</h6>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <strong
+                          >This is the second item's accordion body.</strong
+                        >
+                        It is hidden by default, until the collapse plugin adds
+                        the appropriate classes that we use to style each
+                        element. These classes control the overall appearance,
+                        as well as the showing and hiding via CSS transitions.
+                        You can modify any of this with custom CSS or overriding
+                        our default variables. It's also worth noting that just
+                        about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does
+                        limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- End of Accordion -->
+
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
@@ -249,5 +566,20 @@
         <!-- End of Event Monitoring devices -->
       </div>
     </main>
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+      
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+      
+    ></script>
   </body>
 </html>
