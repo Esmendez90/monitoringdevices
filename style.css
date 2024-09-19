@@ -49,8 +49,11 @@ h2 {
   margin: 2rem auto 3rem;
   text-align: center;
 }
-.program-monitor-instr-page li {
+.program-monitor-instr-page li, .import-monitor-instr-page li {
   margin-bottom: 12px;
+}
+.lead-placement-img-container {
+  margin-bottom: 3rem;
 }
 
 @media only screen and (min-width: 768px) {
