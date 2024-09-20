@@ -49,7 +49,7 @@ h2 {
   margin: 2rem auto 3rem;
   text-align: center;
 }
-.program-monitor-instr-page li, .import-monitor-instr-page li {
+.program-monitor-instr-page li, .apply-monitor-instr-page li, .import-monitor-instr-page li {
   margin-bottom: 12px;
 }
 .lead-placement-img-container {
@@ -63,5 +63,10 @@ h2 {
     grid-template-columns: 50% 50%;
     justify-content: center;
     align-items: center;
+  }
+  .recorder-img-container img, .lead-placement-img-container img {
+    width: 45%;;
+    display: block;
+    margin: auto;
   }
 }
